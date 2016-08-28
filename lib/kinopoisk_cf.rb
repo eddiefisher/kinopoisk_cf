@@ -19,7 +19,7 @@ module KinopoiskCf
   end
 
   def self.cached_response(url)
-    cache = FileCache.new("", "#{Dir.pwd}/caches", 0, 3)
+    cache = FileCache.new("", "#{Dir.pwd}/tmp/kinopoisk_cf", 0, 3)
 
     cache.get_or_set("#{path}/#{url}") do
       response = HTTPClient.new.get URI.escape("#{path}/#{url}"), nil, { 'User-Agent'=>'a', 'Accept-Encoding'=>'a' }
