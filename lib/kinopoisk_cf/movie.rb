@@ -48,7 +48,9 @@ module KinopoiskCf
     end
 
     def budget
-      @doc["budgetData"]["budget"]
+      if @doc.fetch("budgetData", false)
+        @doc["budgetData"].fetch("budget", 0)
+      end
     end
 
     def url
