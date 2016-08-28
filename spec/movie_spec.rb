@@ -9,7 +9,7 @@ describe KinopoiskCf::Movie do
   it 'movie title' do
     movie1 = KinopoiskCf::Movie.new('714888')
     movie2 = KinopoiskCf::Movie.new('843558')
-    expect(movie1.name_ru).to eq("Звёздные войны: Пробуждение силы")
-    expect(movie2.name_ru).to eq("Франкенштейн")
+    expect(movie1.title_ru).to eq("Звёздные войны: Пробуждение силы")
+    expect(movie2.title_ru).to eq("Франкенштейн")
   end
 end
